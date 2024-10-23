@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>网易云音乐</title>
+	<link rel="icon" href="images/网易云ico.icon">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".box_one_title li").click(function(){
+				i=$(this).index();
+				$(".box_two_content").stop().animate({"marginTop":i * -2111},0)
+			});
+			$(".num li").click(function(){
+				i=$(this).index();
+				$(".pisc-list").stop().animate({"marginLeft":i * -1002},300)
+			});
+			$(".zsul li").click(function(){
+			$(".xxk1,.xxk2,.xxk3").hide()
+			var i =$(this).index()
+			$(".xxk1,.xxk2,.xxk3").eq(i).fadeIn(300)
+			$(this).addClass("active").siblings().removeClass("active")
+			});
+			$(".tt_content li").mouseover(function(){
+				$(this).siblings().stop().fadeTo(300,0.5)
+				// siblings返回被选元素的同级元素
+			});
+			$(".tt_content li").mouseout(function(){
+				$(this).siblings().stop().fadeTo(300,1)
+				// siblings返回被选元素的同级元素
+			});
+		})
+
+	</script>
+	<style type="text/css">
+	*{margin: 0;padding: 0;}/*全局设置*/
+	li{list-style: none;}
+		/*网页整体*/
+		#box{
+			width: 100%;
+			height: 2212px;
+			background-color: #ccc;
+		}
+		.box{
+			width: 1222px;
+			height: 2212px;
+			margin: 0 auto;
+			background: rgb(246,246,248);
+		}
+		/*网页标题*/
+		.title{
+			width: 1222px;
+			height: 60px;
+			background: rgb(236,65,65);
+			position: fixed;
+			z-index:99;
+		}
+		/*标题左*/
+		.title_left{
+			width: 528px;
+			height: 60px;
+			float: left;
+		}
+		.title_left_left{
+			width: 200px;
+			height: 60px;
+			float: left;
+		}
+		.title_left_right{
+			width: 260px;
+			height: 60px;
+			float: right;
+			position: relative;
+		}
+		.title_left_right a{
+			line-height: 70px;
+		}
+		.title_left_right input{
+			border-radius: 20px;
+			width: 158px;
+			height: 30px;
+			border: 1px solid rgba(204,204,204,0.01);
+			position: absolute;
+			top: 14px;
+			left: 60px;
+			background: rgb(225,62,62);
+		}
+		.title_left_right img:hover{
+			opacity: 0.6;
+			transition: all 0.4s linear;
+		}
+		.title_left_right .img_one{
+			position: absolute;
+			top: 22px;
+			left: 188px;
+		}
+		.title_left_right .img_two{
+			position: absolute;
+			top: 15px;
+			left: 227px;
+		}
+		/*标题右*/
+		.title_right{
+			width: 308px;
+			height: 60px;
+			float: right;
+			position: relative;
+		}
+		.title_right img:hover{
+			opacity: 0.6;
+			transition: all 0.4s linear;
+		}
+		.title_right .img_one{
+			position: absolute;
+			left: 10px;
+			top: 16px;
+		}
+		.title_right .img_two{
+			position: absolute;
+			left: 90px;
+			top: 24px;
+		}
+		.title_right .img_three{
+			position: absolute;
+			left: 172px;
+			top: 16px;
+		}
+		.title_right .img_four{
+			position: absolute;
+			left: 210px;
+			top: 17px;
+		}
+		.title_right .img_five{
+			position: absolute;
+			left: 250px;
+			top: 19px;
+		}
+		.title_right a{
+			text-decoration: none;
+			margin-left: 22px;
+			line-height: 58px;
+			color: #eee;
+			font-weight: bold;
+			font-size: 14px;
+		}
+		.title_right a:hover{
+			color: #fff;
+			transition: all 0.4s linear;
+		}
+		.title_right .a_one{
+			position: absolute;
+			left: 84px;
+			top: 0px;
+		}
+		/*网页头部*/
+
+		/*侧边左部分*/
+		.header_left{
+			width: 220px;
+			height: 920px;
+			background: #FFF;
+			float: left;
+			position: fixed;
+			top: 60px;
+		}
+		.header_left_content{
+			width: 200px;
+			height: 620px;
+			margin-left: 10px;
+			margin-top: 10px;
+		}
+		.header_left_content_one{
+			width: 200px;
+			height: 50px;
+			cursor: pointer;
+			border-radius: 15px;
+			background: rgb(246,246,247);
+		}
+		.header_left_content_one a{
+			text-decoration: none;
+			color: rgb(49,49,49);
+			line-height: 50px;
+			font-weight: bold;
+		}
+		.header_left_content_one a:hover{
+			color: #000;
+			font-weight: bold;
+		}
+		.header_left_content_one:hover{
+			
+			opacity: 0.7;
+			
+		}
+		.header_left_content_two{
+			width: 200px;
+			height: 50px;
+			margin-top: 2px;
+			cursor: pointer;
+		}
+		.header_left_content_two a{
+			text-decoration: none;
+			color: rgb(49,49,49);
+			line-height: 50px;
+		}
+		.header_left_content_two a:hover{
+			color: #000;
+			font-weight: bold;
+		}
+		.header_left_content_two:hover{
+			background: rgb(246,246,247);
+			opacity: 0.7;
+			
+		}
+		.header_left_content_three{
+			width: 200px;
+			height: 50px;
+			margin-top: 2px;
+			cursor: pointer;
+		}
+		.header_left_content_three a{
+			text-decoration: none;
+			color: rgb(49,49,49);
+			line-height: 50px;
+		}
+		.header_left_content_three a:hover{
+			color: #000;
+			font-weight: bold;
+		}
+		.header_left_content_three:hover{
+			background: rgb(246,246,247);
+			opacity: 0.6;
+			
+		}
+		.header_left_content_four{
+			width: 200px;
+			height: 50px;
+			margin-top: 2px;
+			cursor: pointer;
+		}
+		.header_left_content_four a{
+			text-decoration: none;
+			color: rgb(49,49,49);
+			line-height: 50px;
+		}
+		.header_left_content_four a:hover{
+			color: #000;
+			font-weight: bold;
+		}
+		.header_left_content_four:hover{
+			background: rgb(246,246,247);
+			opacity: 0.6;
+			
+		}
+		.header_left_content_five{
+			width: 200px;
+			height: 50px;
+			margin-top: 2px;
+			cursor: pointer;
+		}
+		.header_left_content_five a{
+			text-decoration: none;
+			color: rgb(49,49,49);
+			line-height: 50px;
+		}
+		.header_left_content_five a:hover{
+			color: #000;
+			font-weight: bold;
+		}
+		.header_left_content_five:hover{
+			background: rgb(246,246,247);
+			opacity: 0.6;
+			
+		}
+		.header_left_content_six{
+			width: 200px;
+			height: 50px;
+			margin-top: 2px;
+			cursor: pointer;
+		}
+		.header_left_content_six li{
+			list-style: none;
+			color: rgb(176,176,176);
+			line-height: 50px;
+		}
+		.header_left_content_seve{
+			width: 200px;
+			height: 50px;
+			cursor: pointer;
+			border-radius: 5px;
+			background: rgb(246,246,247);
+		}
+		.header_left_content_seve a{
+			text-decoration: none;
+			color: rgb(49,49,49);
+			line-height: 50px;
+			font-weight: bold;
+		}
+		.header_left_content_seve a:hover{
+			color: #000;
+			font-weight: bold;
+		}
+		.header_left_content_seve:hover{
+			
+			opacity: 0.7;
+			
+		}
+		.header_left_content_ent{
+			width: 200px;
+			height: 50px;
+			cursor: pointer;
+			border-radius: 5px;
+			margin-top: 2px;
+		}
+		.header_left_content_ent a{
+			text-decoration: none;
+			color: rgb(49,49,49);
+			line-height: 50px;
+			font-weight: bold;
+		}
+		.header_left_content_ent a:hover{
+			color: #000;
+			font-weight: bold;
+		}
+		.header_left_content_ent:hover{
+			background: rgb(246,246,247);
+			opacity: 0.7;
+			
+		}
+		/*侧边右部分*/
+		.header_right{
+			width: 1002px;
+			height: 2152px;
+			float: right;
+			margin-top: 60px;
+			overflow: hidden;
+		}
+		/*右部分标题*/
+		#box_1{
+			width: 1002px;
+			height: 40px;
+			background: #fff;
+			position: fixed;
+			z-index:99;
+		}
+		#box_1 ul.box_one_title li{
+			float: left;
+			margin-left: 86px;
+			line-height: 40px;
+			list-style: none;
+			font-weight: bold;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		#box_1 ul.box_one_title li:hover{
+			color: rgb(236,65,65);
+			text-decoration: underline;
+		}
+
+		#box_2{
+		}
+		#box_2 ul.box_two_content li{
+			list-style: none;
+		}
+		.box_two_title_one{
+			width: 1002px;
+			height: 2111px;
+		}
+		.box_two_title_two{
+			width: 1002px;
+			height: 2111px;
+			background: pink;
+		}
+		.box_two_title_three{
+			width: 1002px;
+			height: 2111px;
+			background: green;
+		}.box_two_title_four{
+			width: 1002px;
+			height: 2111px;
+			background: #a6b5c8;
+		}
+		/*个性推荐轮播图*/
+		.box_two_title_one_log{
+			width: 8016px;
+			height: 360px;
+			margin-top: 40px;
+			overflow: hidden;
+		}
+		.box_two_title_one_log img{
+			width: 1002px;
+			height: 340px;
+			float: left;
+			border-radius: 20px;
+		}
+		ul.pisc_list{
+			width: 8016px;
+			background: green;
+		}
+		ul.pisc_list li{
+			float: left;
+		}
+		.box_two_title_one_log_num{
+			width: 1002px;
+			height: 20px;
+			background: #fff;
+			margin-top: 340px;
+		}
+		ul.num li{
+			width: 20px;
+			height: 10px;
+			background-color: #eee;
+			float: left;
+			margin-left: 94px;
+			cursor: pointer;
+			margin-top: 5px;
+		}
+
+		.box_two_title_one_body{
+			width: 1002px;
+			height: 560px;
+			background: #fff;
+		}
+		.box_two_title_one_body_title{
+			width: 1002px;
+			height: 56px;
+		}
+		.box_two_title_one_body_title a{
+			line-height: 60px;
+			text-decoration: none;
+			color: rgb(55,55,55);
+			font-weight: bold;
+		}
+		.box_two_title_one_body_title span{
+			font-weight: bold;
+			font-family: 楷体;
+		}
+		/*第一个*/
+		.box_two_title_one_body_tj_one{
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+			background-image: url(images/每日歌曲推荐.png);
+			float: left;
+			margin-left: 37px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.box_two_title_one_body_tj_one img{
+			width: 200px;
+			height: 200px;
+			opacity: 0.01;
+			transition: all 0.5s ease;
+		}
+		.box_two_title_one_body_tj_one img:hover{
+			opacity: 1;
+
+		}
+		.box_two_title_one_body_tj_one_1{
+			width: 200px;
+			height: 50px;
+			float: left;
+			margin-left: 37px;
+		}
+		.box_two_title_one_body_tj_one_1 a{
+			text-decoration: none;
+			color: rgb(55,55,55);
+			text-align: center;
+		}
+		.box_two_title_one_body_tj_one_1 a:hover{
+			color: #000;
+		}
+		/*第二个*/
+		.box_two_title_one_body_tj_two{
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+			background-image: url(images/第二个.png);
+			float: left;
+			margin-left: 37px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.box_two_title_one_body_tj_two img{
+			width: 200px;
+			height: 200px;
+			opacity: 0.01;
+			transition: all 0.5s ease;
+		}
+		.box_two_title_one_body_tj_two img:hover{
+			opacity: 1;
+
+		}
+		/*第三个*/
+		.box_two_title_one_body_tj_three{
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+			background-image: url(images/第三个.png);
+			float: left;
+			margin-left: 37px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.box_two_title_one_body_tj_three img{
+			width: 200px;
+			height: 200px;
+			opacity: 0.01;
+			transition: all 0.5s ease;
+		}
+		.box_two_title_one_body_tj_three img:hover{
+			opacity: 1;
+
+		}
+		/*第四个*/
+		.box_two_title_one_body_tj_four{
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+			background-image: url(images/第四个4.png);
+			float: left;
+			margin-left: 37px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.box_two_title_one_body_tj_four img{
+			width: 200px;
+			height: 200px;
+			opacity: 0.01;
+			transition: all 0.5s ease;
+		}
+		.box_two_title_one_body_tj_four img:hover{
+			opacity: 1;
+
+		}
+		/*第五个*/
+		.box_two_title_one_body_tj_five{
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+			background-image: url(images/第五个5.png);
+			float: left;
+			margin-left: 37px;
+			margin-top: 6px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.box_two_title_one_body_tj_five img{
+			width: 200px;
+			height: 200px;
+			opacity: 0.01;
+			transition: all 0.5s ease;
+		}
+		.box_two_title_one_body_tj_five img:hover{
+			opacity: 1;
+
+		}
+		/*第六个*/
+		.box_two_title_one_body_tj_six{
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+			background-image: url(images/第六个6.png);
+			float: left;
+			margin-left: 37px;
+			margin-top: 6px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.box_two_title_one_body_tj_six img{
+			width: 200px;
+			height: 200px;
+			opacity: 0.01;
+			transition: all 0.5s ease;
+		}
+		.box_two_title_one_body_tj_six img:hover{
+			opacity: 1;
+
+		}
+		/*第七个*/
+		.box_two_title_one_body_tj_seve{
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+			background-image: url(images/第七个7.png);
+			float: left;
+			margin-left: 37px;
+			margin-top: 6px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.box_two_title_one_body_tj_seve img{
+			width: 200px;
+			height: 200px;
+			opacity: 0.01;
+			transition: all 0.5s ease;
+		}
+		.box_two_title_one_body_tj_seve img:hover{
+			opacity: 1;
+
+		}
+		/*第八个*/
+		.box_two_title_one_body_tj_ent{
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+			background-image: url(images/第八个8.png);
+			float: left;
+			margin-left: 37px;
+			margin-top: 6px;
+			border-radius: 10px;
+		}
+		.box_two_title_one_body_tj_ent img{
+			width: 200px;
+			height: 200px;
+			opacity: 0.01;
+			transition: all 0.5s ease;
+		}
+		.box_two_title_one_body_tj_ent img:hover{
+			opacity: 1;
+
+		}
+
+		/*独家放送部分*/
+		.box_two_title_one_body2{
+			width: 1002px;
+			height: 300px;
+			position: relative;
+		}
+		.box_two_title_one_body2 img{
+			width: 301px;
+			height: 170px;
+		}
+		.box_two_title_one_body2 img:hover{
+			transform: scale(1.03);
+			transition: all 0.5s linear;
+		}
+		.box_two_title_one_body2_title{
+			width: 1002px;
+			height: 40px;
+			background: #fff;
+		}
+		.box_two_title_one_body2_title a{
+			text-decoration: none;
+			color: rgb(55,55,55);
+			line-height: 50px;
+			float: left;
+			font-weight: bold;
+		}
+		.box_two_title_one_body2_title span{
+			font-family: 楷体;
+			float: left;
+			line-height: 50px;
+			font-weight: bold;
+		}
+		.box_two_title_one_body2_body_1{
+			width: 300px;
+			height: 170px;
+			background: #b66a5f;
+			position: absolute;
+			left: 4px;
+			top: 56px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.box_two_title_one_body2_body_2{
+			width: 300px;
+			height: 170px;
+			background: #b66a5f;
+			position: absolute;
+			left: 352px;
+			top: 56px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.box_two_title_one_body2_body_3{
+			width: 300px;
+			height: 170px;
+			background: #b66a5f;
+			position: absolute;
+			left: 698px;
+			top: 56px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.box_two_title_one_body3{
+			width: 1002px;
+			height: 278px;
+			background: #fff;
+		}
+		.da{
+			width:1002px;
+			height:278px;
+			position:relative;
+		}
+		.da .zsul{
+			position: absolute;
+			left:50px;
+			top:2px;
+		}
+		.da ul li.da_ul_li{
+			float:left;
+			list-style:none;
+			margin-left:100px;
+			cursor: pointer;
+		}
+		.xxk{
+			width:1002px;
+			height:250px;
+			position: absolute;
+			bottom:0px;
+		}
+		.xxk2{
+			display:none;
+			width:1002px;
+			height:250px;
+		}
+		.xxk3{
+			display:none;
+			width: 1002px;
+			height: 250px;
+		}
+		.xxk1_one{
+			width: 330px;
+			height: 120px;
+			background: #eee;
+			float: left;
+			margin-left: 3px;
+			margin-top: 3px;
+			cursor: pointer;
+			position: relative;
+		}
+		.xxk1_one .a_one{
+			text-decoration: none;
+			color: #000;
+			position: absolute;
+			top: 28px;
+			left: 116px;
+		}
+		.xxk1_one .a_two{
+			text-decoration: none;
+			color: #000;
+			position: absolute;
+			top: 54px;
+			left: 144px;
+		}
+		.xxk1_one .img_one{
+			width: 58px;
+			height: 58px;
+			position: absolute;
+			top: 30px;
+			left: 50px;
+		}
+		.xxk1_one .img_two{
+			position: absolute;
+			top: 60px;
+			left: 116px;
+		}
+		.xxk1_one:hover{
+			background: #ccc;
+			transition: all 1s linear;
+		}
+		.xxk1_two{
+			width: 330px;
+			height: 120px;
+			background: #eee;
+			float: left;
+			margin-left: 3px;
+			margin-top: 4px;
+			cursor: pointer;
+			position: relative;
+		}
+		.xxk1_two .two_a_one{
+			text-decoration: none;
+			color: #000;
+			position: absolute;
+			top: 28px;
+			left: 116px;
+		}
+		.xxk1_two .two_a_two{
+			text-decoration: none;
+			color: #000;
+			position: absolute;
+			top: 54px;
+			left: 144px;
+		}
+		.two_img_one{
+			width: 58px;
+			height: 58px;
+			position: absolute;
+			top: 30px;
+			left: 50px;
+		}
+		.two_img_two{
+			position: absolute;
+			top: 60px;
+			left: 116px;
+		}
+		.xxk1_two:hover{
+			background: #ccc;
+			transition: all 0.5s linear;
+		}
+		/*推荐MV*/
+		.tjmv{
+			width: 1002px;
+			height: 224px;
+			position: relative;
+			top: 278px;
+		}
+		.tjmv_title{
+			width: 1002px;
+			height: 40px;
+		}
+		.tjmv_title a{
+			text-decoration: none;
+			line-height: 40px;
+			font-weight: bold;
+			color: #fff;
+		}
+		.tjmv_title span{
+			font-family: 楷体;
+			font-weight: bold;
+			color: #fff;
+		}
+		.tjmv_content_one{
+			width: 245px;
+			height: 135px;
+			background: pink;
+			float: left;
+			margin-left: 4.5px;
+			background-image: url(images/推荐MV1.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			overflow: hidden;
+		}
+		.tjmv_content_one img{
+			opacity: 0.01;
+			width: 245px;
+			height: 135px;
+		}
+		.tjmv_content_one img:hover{
+			opacity: 1;
+			transition: all 0.5s linear;
+			transform: scale(1.02);
+		}
+		.tjmv_content_two{
+			width: 245px;
+			height: 135px;
+			background: pink;
+			float: left;
+			margin-left: 4.5px;
+			background-image: url(images/推荐MV2.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			overflow: hidden;
+		}
+		.tjmv_content_two img{
+			opacity: 0.01;
+			width: 245px;
+			height: 135px;
+		}
+		.tjmv_content_two img:hover{
+			opacity: 1;
+			transition: all 0.5s linear;
+			transform: scale(1.02);
+		}
+		.tjmv_content_three{
+			width: 245px;
+			height: 135px;
+			background: pink;
+			float: left;
+			margin-left: 4.5px;
+			background-image: url(images/推荐MV3.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			overflow: hidden;
+		}
+		.tjmv_content_three img{
+			opacity: 0.01;
+			width: 245px;
+			height: 135px;
+		}
+		.tjmv_content_three img:hover{
+			opacity: 1;
+			transition: all 0.5s linear;
+			transform: scale(1.02);
+		}
+		.tjmv_content_four{
+			width: 245px;
+			height: 135px;
+			background: pink;
+			float: left;
+			margin-left: 4.5px;
+			background-image: url(images/推荐MV4.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			overflow: hidden;
+		}
+		.tjmv_content_four img{
+			opacity: 0.01;
+			width: 245px;
+			height: 135px;
+		}
+		.tjmv_content_four img:hover{
+			opacity: 1;
+			transition: all 0.5s linear;
+			transform: scale(1.02);
+		}
+		.tjmv_content_five{
+			width: 245px;
+			height: 44px;
+			float: left;
+			margin-left: 4.5px;
+			margin-top: 4px;
+		}
+		.tjmv_content_five a{
+			text-decoration: none;
+			color: #333;
+		}
+		.tjmv_content_five a:hover{
+			color: #000;
+		}
+		.tjmv_content_five span{
+			color: rgb(103,103,103);
+		}
+		.tjmv_content_six{
+			width: 245px;
+			height: 44px;
+			float: left;
+			margin-left: 4.5px;
+			margin-top: 4px;
+		}
+		.tjmv_content_six a{
+			text-decoration: none;
+			color: #333;
+		}
+		.tjmv_content_six a:hover{
+			color: #000;
+		}
+		.tjmv_content_six span{
+			color: rgb(103,103,103);
+		}
+		.tjmv_content_seven{
+			width: 245px;
+			height: 44px;
+			float: left;
+			margin-left: 4.5px;
+			margin-top: 4px;
+		}
+		.tjmv_content_seven a{
+			text-decoration: none;
+			color: #333;
+		}
+		.tjmv_content_seven a:hover{
+			color: #000;
+		}
+		.tjmv_content_seven span{
+			color: rgb(103,103,103);
+		}
+		.tjmv_content_ent{
+			width: 245px;
+			height: 44px;
+			float: left;
+			margin-left: 4.5px;
+			margin-top: 4px;
+		}
+		.tjmv_content_ent a{
+			text-decoration: none;
+			color: #333;
+		}
+		.tjmv_content_ent a:hover{
+			color: #000;
+		}
+		.tjmv_content_ent span{
+			color: rgb(103,103,103);
+		}
+		/*听听*/
+		.tt{
+			width: 1002px;
+			height: 294px;
+			background: #fff;
+			position: relative;
+			top: 278px;
+		}
+		.tt_title{
+			width: 1002px;
+			height: 40px;
+			background: #eee;
+		}
+		.tt_title a{
+			text-decoration: none;
+			color: #000;
+			line-height: 40px;
+		}
+		.tt_title span{
+			font-family: 楷体;
+			line-height: 40px;
+			cursor: pointer;
+		}
+		.tt_content{
+			width: 924px;
+			height: 206px;
+			background: #eee;
+			position: absolute;
+			top: 64px;
+			left: 34px;
+		}
+		.tt_content li{
+			float: left;
+			margin-left: 20px;
+		}
+		.tt_content img{
+			width: 206px;
+			height: 206px;
+			border-radius: 10px;
+		}
+		/*尾部*/
+		.wb{
+			width: 1002px;
+			height: 100px;
+			position: relative;
+			top: 250px;
+			background: #fff;
+		}
+		/*尾部上部分*/
+		.wb_top{
+			width: 360px;
+			height: 24px;
+			margin: 0 auto;
+		}
+		.wb_top a{
+			text-decoration: none;
+			color: rgb(159,159,159);
+			font-family: 楷体;
+		}
+		/*尾部下部分*/
+		.wb_bottom{
+			width: 122px;
+			height: 32px;
+			border: 1px solid red;
+			border-radius: 5px;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+		.wb_bottom a{
+			text-decoration: none;
+			color: rgb(236,65,65);
+			line-height: 32px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 网页整体 -->
+<div id="box">
+
+	<div class="box">
+		<!-- 网页标题 -->
+		<div class="title">
+			<!-- 标题左 -->
+			<div class="title_left">
+				<div class="title_left_left">
+					<a href=""><img src="images/网易云log.png"></a>
+				</div>
+				<div class="title_left_right">
+					<a href="" title="上一页"><img src="images/标题左.png"></a>&nbsp;&nbsp;<a href="" title="下一页"><img src="images/标题右.png"></a>
+					<input type="" name="">
+					<a href="" title="搜索一下"><img src="images/搜索.png" class="img_one"></a>
+					<a href="" title="语音搜索"><img src="images/语音.png" class="img_two"></a>
+				</div>
+			</div>
+			<!-- 标题右 -->
+			<div class="title_right">
+				<a href="" title="请登录"><img src="images/用户登录.png" class="img_one"></a>
+				<a href="">未登录</a><a href=""><img src="images/未登录.png" class="img_two"></a>
+				<a href="" class="a_one">开通VIP</a>
+				<a href="" title="设置"><img src="images/设置.png" class="img_three"></a><a href="" title="换肤"><img src="images/换肤.png" class="img_four"></a><a href="" title="消息"><img src="images/消息.png" class="img_five"></a>
+			</div>
+		</div>
+		<!-- 头部侧边左部分 -->
+		<div class="header_left">
+			<div class="header_left_content">
+				<div class="header_left_content_one">
+					<a href=""><center>&nbsp;&nbsp;发现音乐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></a>
+				</div>
+				<div class="header_left_content_two">
+					<a href=""><center>&nbsp;&nbsp;视频&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></a>
+				</div>
+				<div class="header_left_content_three">
+					<a href=""><center>&nbsp;&nbsp;朋友&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></a>
+				</div>
+				<div class="header_left_content_four">
+					<a href=""><center>&nbsp;&nbsp;直播&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></a>
+				</div>
+				<div class="header_left_content_five">
+					<a href=""><center>&nbsp;&nbsp;私人FM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></a>
+				</div>
+				<div class="header_left_content_six">
+					<li><left>&nbsp;&nbsp;我的音乐</left></li>
+				</div>
+				<div class="header_left_content_seve">
+					<a href=""><center>&nbsp;<img src="images/本地音乐.png">&nbsp;本地音乐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></a>
+				</div>
+				<div class="header_left_content_ent">
+					<a href=""><center>&nbsp;<img src="images/下载管理.png">&nbsp;下载管理&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></a>
+				</div>
+			</div>
+		</div>
+		<!-- 头部侧边右部分 -->
+		<div class="header_right">
+			<!-- 右部分标题 -->
+				<div id="diyi">
+					<div id="box_1">
+						<ul class="box_one_title">
+							<li>个性推荐</li>
+							<li>歌单</li>
+							<li>主播电台</li>
+							<li>排行榜</li>
+						</ul>
+					</div>
+				</div>
+				<div id="box_2">
+					<ul class="box_two_content">
+						<li>
+							<div class="box_two_title_one">
+								<!-- 个性推荐轮播图容器 -->
+								<div class="box_two_title_one_log">
+									<ul class="pisc-list">
+										<li><img src="images/109951165562782465.jpg"></li>
+										<li><img src="images/109951165559922114.jpg"></li>
+										<li><img src="images/109951165562709405.jpg"></li>
+										<li><img src="images/109951165562748206.jpg"></li>
+										<li><img src="images/109951165562752291.jpg"></li>
+										<li><img src="images/109951165562775409.jpg"></li>
+										<li><img src="images/109951165562799328.jpg"></li>
+										<li><img src="images/109951165563060573.jpg"></li>
+									</ul>
+									<div class="box_two_title_one_log_num">
+										<ul class="num">
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+								</div>
+								<div class="box_two_title_one_body">
+									<div class="box_two_title_one_body_title">
+										<a href="#">推荐歌单</a> <span>></span>
+									</div>
+									<!-- 推荐歌单第一个 -->
+									<div class="box_two_title_one_body_tj_one">
+										<a href=""><img src="images/每日歌曲推荐1.png"></a>
+									</div>
+									<!-- 推荐歌单第二个 -->
+									<div class="box_two_title_one_body_tj_two">
+										<a href=""><img src="images/第二个2.png"></a>
+									</div>                
+									<!-- 推荐歌单第三个 -->
+									<div class="box_two_title_one_body_tj_three">
+										<a href=""><img src="images/第三个3.png"></a>
+									</div>
+									<!-- 推荐歌单第四个 -->
+									<div class="box_two_title_one_body_tj_four">
+										<a href=""><img src="images/第四个.png"></a>
+									</div>
+									<!-- 第一列下面 -->
+									<div class="box_two_title_one_body_tj_one_1">
+										<a href="">&nbsp;每日歌曲推荐</a>
+									</div>
+									<div class="box_two_title_one_body_tj_one_1">
+										<a href=""><center>岁末愉快&nbsp;|&nbsp;用一首歌和旧日</center>&nbsp;认真告别</a>
+									</div> 
+									<div class="box_two_title_one_body_tj_one_1">
+										<a href=""><center>Crush只是一场小感冒</center></a>
+									</div>
+									<div class="box_two_title_one_body_tj_one_1">
+										<a href=""><center>【节奏控】那些超带感的音</center>&nbsp;乐</a>
+									</div>
+									<!-- 推荐歌单第五个 -->
+									<div class="box_two_title_one_body_tj_five">
+										<a href=""><img src="images/第五个.png"></a>
+									</div>
+									<div class="box_two_title_one_body_tj_five_1">
+										
+									</div>
+									<!-- 推荐歌单第六个 -->
+									<div class="box_two_title_one_body_tj_six">
+										<a href=""><img src="images/第六个.png"></a>
+									</div>
+									<div class="box_two_title_one_body_tj_six_1">
+										
+									</div>
+									<!-- 推荐歌单第七个 -->
+									<div class="box_two_title_one_body_tj_seve">
+										<a href=""><img src="images/第七个.png"></a>
+									</div>
+									<div class="box_two_title_one_body_tj_seve_1">
+										
+									</div>
+									<!-- 推荐歌单第八个 -->
+									<div class="box_two_title_one_body_tj_ent">
+										<a href=""><img src="images/第八个.png"></a>
+									</div>
+									<div class="box_two_title_one_body_tj_ent_1">
+										
+									</div>
+									<!-- 第二列下面 -->
+									<div class="box_two_title_one_body_tj_one_1">
+										<a href=""><center>[1W+热评]欧美万评撩耳男</center>&nbsp;生(单曲循环)</a>
+									</div>
+									<div class="box_two_title_one_body_tj_one_1">
+										<a href=""><center>[电音]你一定听过的完评电</center>&nbsp;音</a>
+									</div> 
+									<div class="box_two_title_one_body_tj_one_1">
+										<a href="">&nbsp;&nbsp;[汤·姆·哈·迪·专·属]</a>
+									</div>
+									<div class="box_two_title_one_body_tj_one_1">
+										<a href=""><center>【精选】车载享受Deep House深度灵魂潮牌慢摇</center></a>
+									</div>
+								</div>
+								<!-- 独家放送部分 -->
+								<div class="box_two_title_one_body2">
+									<div class="box_two_title_one_body2_title">
+										<a href="">独家放送</a>&nbsp;<span>></span>
+									</div>
+									<div class="box_two_title_one_body2_body_1">
+										<a href=""><img src="images/辣目洋子.png"></a>
+									</div>
+									<div class="box_two_title_one_body2_body_2">
+										<a href=""><img src="images/陈奕迅.png"></a>
+									</div>
+									<div class="box_two_title_one_body2_body_3">
+										<a href=""><img src="images/音乐好朋友.png"></a>
+									</div>
+								</div>
+								<div class="box_two_title_one_body3">
+									<div class="da">
+										<!-- <h3>标题</h3> -->
+										<ul class="zsul">
+											<li class="da_ul_li">最新音乐</li>
+											<li class="da_ul_li">流行音乐</li>
+											<li class="da_ul_li">最近最热</li>
+										</ul>
+										<div class="xxk">
+											<div class="xxk1">
+												<div class="xxk1_one">
+														<img src="images/逝去的歌.png" class="img_one">
+														<img src="images/SQ.png" class="img_two">
+														<a href="" class="a_one">逝去的歌(Live)</a>
+														<a href="" class="a_two">郁可唯</a>
+												</div>
+												<div class="xxk1_one">
+														<img src="images/逃离.png" class="img_one">
+														<img src="images/SQ.png" class="img_two">
+														<a href="" class="a_one">逃离(录音室版)</a>
+														<a href="" class="a_two">隔壁老樊</a>
+												</div>
+												<div class="xxk1_one">
+														<img src="images/Pay Back.png" class="img_one">
+														<img src="images/SQ.png" class="img_two">
+														<a href="" class="a_one">Pay Back</a>
+														<a href="" class="a_two">郁可唯</a>
+												</div>
+												<div class="xxk1_two">
+														<img src="images/步履不停.png" class="two_img_one">
+														<img src="images/SQ.png" class="two_img_two">
+														<a href="" class="two_a_one">步履不停</a>
+														<a href="" class="two_a_two">陈鸿宇</a>
+												</div>
+												<div class="xxk1_two">
+														<img src="images/敌众 十面埋伏.png" class="two_img_one">
+														<img src="images/SQ.png" class="two_img_two">
+														<a href="" class="two_a_one">众敌·十面埋伏</a>
+														<a href="" class="two_a_two">一奏器乐派</a>
+												</div>
+												<div class="xxk1_two">
+														<img src="images/丑人多作怪.png" class="two_img_one">
+														<img src="images/SQ.png" class="two_img_two">
+														<a href="" class="two_a_one">丑人多作怪</a>
+														<a href="" class="two_a_two">告五人</a>
+												</div>
+											</div>
+											<div class="xxk2">
+												<div class="xxk1_one">
+														<img src="images/我不要你了.png" class="img_one">
+														<img src="images/SQ.png" class="img_two">
+														<a href="" class="a_one">我不要你了</a>
+														<a href="" class="a_two">yy想唱歌</a>
+												</div>
+												<div class="xxk1_one">
+														<img src="images/逃离.png" class="img_one">
+														<img src="images/SQ.png" class="img_two">
+														<a href="" class="a_one">逃离(录音室版)</a>
+														<a href="" class="a_two">隔壁老樊</a>
+												</div>
+												<div class="xxk1_one">
+														<img src="images/Pay Back.png" class="img_one">
+														<img src="images/SQ.png" class="img_two">
+														<a href="" class="a_one">Pay Back</a>
+														<a href="" class="a_two">郁可唯</a>
+												</div>
+												<div class="xxk1_two">
+														<img src="images/步履不停.png" class="two_img_one">
+														<img src="images/SQ.png" class="two_img_two">
+														<a href="" class="two_a_one">步履不停</a>
+														<a href="" class="two_a_two">陈鸿宇</a>
+												</div>
+												<div class="xxk1_two">
+														<img src="images/敌众 十面埋伏.png" class="two_img_one">
+														<img src="images/SQ.png" class="two_img_two">
+														<a href="" class="two_a_one">众敌·十面埋伏</a>
+														<a href="" class="two_a_two">一奏器乐派</a>
+												</div>
+												<div class="xxk1_two">
+														<img src="images/丑人多作怪.png" class="two_img_one">
+														<img src="images/SQ.png" class="two_img_two">
+														<a href="" class="two_a_one">丑人多作怪</a>
+														<a href="" class="two_a_two">告五人</a>
+												</div>
+											</div>
+											<div class="xxk3">
+												<div class="xxk1_one">
+														<img src="images/逝去的歌.png" class="img_one">
+														<img src="images/SQ.png" class="img_two">
+														<a href="" class="a_one">逝去的歌(Live)</a>
+														<a href="" class="a_two">郁可唯</a>
+												</div>
+												<div class="xxk1_one">
+														<img src="images/逃离.png" class="img_one">
+														<img src="images/SQ.png" class="img_two">
+														<a href="" class="a_one">逃离(录音室版)</a>
+														<a href="" class="a_two">隔壁老樊</a>
+												</div>
+												<div class="xxk1_one">
+														<img src="images/Pay Back.png" class="img_one">
+														<img src="images/SQ.png" class="img_two">
+														<a href="" class="a_one">Pay Back</a>
+														<a href="" class="a_two">郁可唯</a>
+												</div>
+												<div class="xxk1_two">
+														<img src="images/步履不停.png" class="two_img_one">
+														<img src="images/SQ.png" class="two_img_two">
+														<a href="" class="two_a_one">步履不停</a>
+														<a href="" class="two_a_two">陈鸿宇</a>
+												</div>
+												<div class="xxk1_two">
+														<img src="images/敌众 十面埋伏.png" class="two_img_one">
+														<img src="images/SQ.png" class="two_img_two">
+														<a href="" class="two_a_one">众敌·十面埋伏</a>
+														<a href="" class="two_a_two">一奏器乐派</a>
+												</div>
+												<div class="xxk1_two">
+														<img src="images/丑人多作怪.png" class="two_img_one">
+														<img src="images/SQ.png" class="two_img_two">
+														<a href="" class="two_a_one">丑人多作怪</a>
+														<a href="" class="two_a_two">告五人</a>
+												</div>
+											</div>
+										</div>
+										<!-- 推荐MV -->
+										<div class="tjmv">
+											<div class="tjmv_title">
+												<a href="">推荐MV</a>&nbsp;<span>></span>
+											</div>
+											<div class="tjmv_content_one">
+												<a href=""><img src="images/推荐MV5.png"></a>
+											</div>
+											<div class="tjmv_content_two">
+												<a href=""><img src="images/推荐MV6.png"></a>
+											</div>
+											<div class="tjmv_content_three">
+												<a href=""><img src="images/推荐MV7.png"></a>
+											</div>
+											<div class="tjmv_content_four">
+												<a href=""><img src="images/推荐MV8.png"></a>
+											</div>
+											<div class="tjmv_content_five">
+												<a href="">嘿，你好</a><br><span>康梦琪</span>
+											</div>
+											<div class="tjmv_content_six">
+												<a href="">我的妈妈是天使</a><br><span>王析月</span>
+											</div>
+											<div class="tjmv_content_seven">
+												<a href="">谈一场恋爱</a><br><span>周羽然</span>
+											</div>
+											<div class="tjmv_content_ent">
+												<a href="">蝙蝠</a><br><span>刺猬</span>
+											</div>
+										</div>
+										<!-- 听听 -->
+										<div class="tt">
+											<div class="tt_title">
+												<a href="">听听</a>&nbsp;<span>></span>
+											</div>
+											<div class="tt_content">
+												<ul>
+													<li><img src="images/人间一趟.png"></li>
+													<li><img src="images/DJ.png"></li>
+													<li><img src="images/说唱.png"></li>
+													<li><img src="images/欧气女神.png"></li>
+												</ul>
+											</div>
+											<!-- 尾部 -->
+											<div class="wb">
+												<div class="wb_top">
+													<a href="">现在可以根据个人喜好,自由调整首页栏目顺序啦~</a>
+												</div>
+												<div class="wb_bottom">
+													<a href=""><center>调整栏目顺序</center></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="box_two_title_two"></div>
+						</li>
+						<li>
+							<div class="box_two_title_three"></div>
+						</li>
+						<li>
+							<div class="box_two_title_four"></div>
+						</li>
+					</ul>
+				</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
